@@ -1,0 +1,25 @@
+type PaymentDocumentDraft {
+    draft: Draft,
+    checksResp: ChecksResp
+}
+
+type Draft {
+    id: ID,
+    payeeAccount: String,
+    payerAccount: String,
+    sum: Float
+}
+
+type ChecksResp {
+    res: [CheckFieldRes]
+}
+
+type CheckFieldRes {
+    filedName: String,
+    checkRes: String
+}
+
+type Query {
+    drafts(count: Int): [Draft]
+    draft(id: ID): Draft
+}

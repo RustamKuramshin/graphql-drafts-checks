@@ -1,0 +1,33 @@
+GET /drafts
+Host: localhost:8081
+
+###
+POST /drafts
+Host: localhost:8081
+Content-Type: application/json
+
+{
+  "payeeAccount": "12345678901234567897",
+  "payerAccount": "09876543210987654327",
+  "sum": 400
+}
+
+###
+PUT /drafts
+Host: localhost:8081
+Content-Type: application/json
+
+{
+  "id": 1,
+  "payeeAccount": "12345678901234567890",
+  "payerAccount": "09876543210987654321",
+  "sum": 200
+}
+
+###
+GET /drafts/1
+Host: localhost:8081
+
+###
+DELETE /drafts/1
+Host: localhost:8081

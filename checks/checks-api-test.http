@@ -1,0 +1,30 @@
+POST /checks/draft
+Host: localhost:8082
+Content-Type: application/json
+
+{
+  "payeeAccount": "12345678901234567890",
+  "payerAccount": "09876543210987654321",
+  "sum": 100.57
+}
+
+###
+POST /checks/draft
+Host: localhost:8082
+Content-Type: application/json
+
+{
+  "payeeAccount": "098765432109876543211",
+  "payerAccount": "0987654321098765432",
+  "sum": -1
+}
+
+###
+POST /checks/field
+Host: localhost:8082
+Content-Type: application/json
+
+{
+  "fieldName": "payeeAccount",
+  "fieldValue": "1234567890123456789"
+}
