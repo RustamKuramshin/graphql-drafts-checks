@@ -23,3 +23,7 @@ type Query {
     drafts(count: Int): [Draft]
     draft(id: ID): Draft
 }
+
+type Mutation {
+    createDraft(payeeAccount: String!, payerAccount: String!, sum: Float!): Draft
+}
