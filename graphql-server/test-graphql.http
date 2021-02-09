@@ -1,0 +1,26 @@
+POST /graphql
+Host: localhost:8080
+Content-Type: application/graphql
+
+mutation createDraft {
+    createDraft(payeeAccount: "12345678901234567893", payerAccount: "12345678901234567892", sum: 100.45) {
+        id
+        payeeAccount
+        payerAccount
+        sum
+    }
+}
+
+###
+POST /graphql
+Host: localhost:8080
+Content-Type: application/graphql
+
+query getDrafts {
+    drafts(count: 10){
+        id
+        payeeAccount
+        payerAccount
+        sum
+    }
+}

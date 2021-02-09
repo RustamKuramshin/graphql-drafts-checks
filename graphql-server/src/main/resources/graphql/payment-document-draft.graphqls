@@ -10,6 +10,13 @@ type Draft {
     sum: Float
 }
 
+#input InputDraft {
+#    id: ID,
+#    payeeAccount: String,
+#    payerAccount: String,
+#    sum: Float
+#}
+
 type ChecksResp {
     res: [CheckFieldRes]
 }
@@ -22,6 +29,7 @@ type CheckFieldRes {
 type Query {
     drafts(count: Int): [Draft]
     draft(id: ID): Draft
+#    draftCheck(draft: InputDraft): ChecksResp
 }
 
 type Mutation {
